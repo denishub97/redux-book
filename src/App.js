@@ -1,8 +1,7 @@
-import SearchForm from "./components/SearchForm/SearchForm";
-import Hero from "./components/Hero/Hero";
-import List from "./components/List/List";
-import Container from './components/Container/Container';
-
+import Hero from './components/Hero/Hero.js';
+import SearchForm from './components/SearchForm/SearchForm.js';
+import List from './components/List/List.js';
+import Container from './components/Container/Container.js';
 const App = () => {
   return (
     <Container>
@@ -10,7 +9,6 @@ const App = () => {
       <SearchForm />
       <List />
     </Container>
-  )
+  );
 };
-
 export default App;
