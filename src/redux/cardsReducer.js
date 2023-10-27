@@ -1,9 +1,9 @@
 import shortid from 'shortid';
 import { strContains } from '../utils/strContains';
-
+// Selector
 export const getAllCards = (state) => state.cards;
 export const getFilteredCards = ({ cards, searchString }, columnId) =>
-
+  //data destructuring, extracting values ​​to const...
   cards.filter(
     (card) =>
       card.columnId === columnId && strContains(card.title, searchString)
@@ -12,10 +12,13 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
 export const getFavoriteCards = ({ cards }) =>
   cards.filter((card) => card.isFavorite === true);
 
+// actions
 const createActionName = (actionName) => `app/lists/${actionName}`;
 const ADD_CARD = createActionName('ADD_CARD');
 const TOGGLE_CARD_FAVORITE = createActionName('TOGGLE_CARD_FAVORITE');
 const REMOVE_CARD = createActionName('REMOVE_CARD');
+
+// action creators
 
 export const addCard = (payload) => ({ type: ADD_CARD, payload });
 export const toggleCardFavorite = (payload) => ({
